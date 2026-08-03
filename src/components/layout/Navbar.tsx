@@ -15,7 +15,6 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Perkenalan', href: '#hero' },
     { name: 'Produk & Layanan', href: '#services' },
     { name: 'Keunggulan', href: '#why-us' },
     { name: 'Alur Produksi', href: '#process' },
@@ -38,7 +37,7 @@ export const Navbar: React.FC = () => {
           <img
             src="/logo-menyamping.png"
             alt="Manyar Hardbox Logo"
-            className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </a>
 
