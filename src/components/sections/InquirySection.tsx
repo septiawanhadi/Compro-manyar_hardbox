@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { toast } from 'sonner';
-import { Clock, PackageCheck, FileText, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Clock, PackageCheck, FileText, MessageCircle, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { PackagingCategory } from '@/types';
@@ -69,14 +69,42 @@ export const InquirySection: React.FC = () => {
     }
   };
 
+  // Nomor WhatsApp tujuan (format internasional tanpa +)
+  const WA_NUMBER = '6281234567890';
+
   const onSubmit = async (data: InquiryFormValues) => {
-    // Simulate API submission
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    console.log('Packaging Inquiry Form Submitted:', data);
+    // Format pesan WhatsApp yang terstruktur
+    const message = [
+      '🎁 *PERMINTAAN PENAWARAN PACKAGING — MANYAR HARDBOX*',
+      '',
+      '👤 *Identitas Klien*',
+      `• Nama PIC     : ${data.clientName}`,
+      `• Brand/Perusahaan : ${data.companyName}`,
+      `• Email         : ${data.email}`,
+      `• WhatsApp      : ${data.phoneNumber}`,
+      '',
+      '📦 *Jenis Pesanan Packaging*',
+      data.orderType.map((t) => `• ${t}`).join('\n'),
+      '',
+      '📊 *Detail Pesanan*',
+      `• Jumlah Request  : ${data.requestScale}`,
+      `• Perkiraan Anggaran : ${data.estimatedBudget}`,
+      '',
+      '📝 *Catatan Spesifikasi Proyek*',
+      data.projectNotes,
+      '',
+      '_Pesan ini dikirim melalui form di website Manyar Hardbox._',
+    ].join('\n');
+
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+
     setIsSubmitted(true);
-    toast.success('Pengajuan proyek berhasil terkirim!', {
-      description: 'Tim percetakan kami akan menghubungi WhatsApp/Email Anda dalam <24 jam.',
+    toast.success('Anda akan diarahkan ke WhatsApp!', {
+      description: 'Pesan sudah terformat otomatis, tinggal klik Kirim di WhatsApp.',
     });
+
+    // Buka WhatsApp di tab baru
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -165,13 +193,13 @@ export const InquirySection: React.FC = () => {
               {isSubmitted ? (
                 <div className="text-center py-12 space-y-6 animate-in fade-in duration-500">
                   <div className="w-20 h-20 rounded-full bg-primary/15 text-primary flex items-center justify-center mx-auto">
-                    <CheckCircle2 className="w-10 h-10" />
+                    <MessageCircle className="w-10 h-10" />
                   </div>
                   <h3 className="font-display font-extrabold text-3xl text-foreground">
-                    Pengajuan Proyek Terkumpul!
+                    Pesan Berhasil Dikirim ke WhatsApp!
                   </h3>
                   <p className="text-muted-foreground text-base max-w-md mx-auto leading-relaxed">
-                    Terima kasih telah mempercayakan kebutuhan kemasan Anda. Tim kami akan segera meninjau spesifikasi dan menghubungi Anda dalam waktu kurang dari 24 jam.
+                    Tab WhatsApp telah terbuka dengan pesan yang sudah terformat otomatis. Cukup klik <strong>Kirim</strong> di WhatsApp untuk langsung terhubung dengan tim kami.
                   </p>
                   <Button
                     variant="outline"
@@ -181,7 +209,7 @@ export const InquirySection: React.FC = () => {
                       reset();
                     }}
                   >
-                    Kirim Pengajuan Baru
+                    Isi Formulir Baru
                   </Button>
                 </div>
               ) : (
@@ -362,11 +390,11 @@ export const InquirySection: React.FC = () => {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      <span>Mengirim Pengajuan Proyek...</span>
+                      <span>Memproses & Membuka WhatsApp...</span>
                     ) : (
                       <>
-                        <span>Kirim Pengajuan Proyek Packaging</span>
-                        <Send className="w-5 h-5" />
+                        <MessageCircle className="w-5 h-5" />
+                        <span>Kirim via WhatsApp</span>
                       </>
                     )}
                   </Button>
