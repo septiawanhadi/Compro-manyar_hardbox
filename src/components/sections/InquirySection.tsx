@@ -70,7 +70,7 @@ export const InquirySection: React.FC = () => {
   };
 
   // Nomor WhatsApp tujuan (format internasional tanpa +)
-  const WA_NUMBER = '6281234567890';
+  const WA_NUMBER = '6289679008888';
 
   const onSubmit = async (data: InquiryFormValues) => {
     // Format pesan WhatsApp yang terstruktur
