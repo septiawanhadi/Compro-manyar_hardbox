@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo */}
         <a href="#hero" className="flex items-center gap-3 group">
           <img
-            src="/logo-menyamping.png"
+            src="/logo.png"
             alt="Manyar Hardbox Logo"
             className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />

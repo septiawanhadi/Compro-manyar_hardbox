@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <img
-                src="/logo-menyamping.png"
+                src="/logo.png"
                 alt="Manyar Hardbox Logo"
                 className="h-11 w-auto object-contain"
               />
