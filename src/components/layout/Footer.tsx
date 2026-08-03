@@ -9,12 +9,11 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand Info */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                <Package className="w-5 h-5" />
-              </div>
-              <span className="font-display font-extrabold text-2xl tracking-tight text-foreground">
-                MANYAR HARDBOX
-              </span>
+              <img
+                src="/logo-menyamping.png"
+                alt="Manyar Hardbox Logo"
+                className="h-11 w-auto object-contain"
+              />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Produsen percetakan & manufaktur packaging produk custom terpercaya. Menghadirkan kemasan presisi tinggi, elegan, dan ramah lingkungan untuk pertumbuhan brand Anda.

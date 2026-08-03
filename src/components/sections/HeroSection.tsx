@@ -76,9 +76,9 @@ export const HeroSection: React.FC = () => {
             <div className="relative rounded-[2.5rem] p-3 bg-white border-4 border-white shadow-soft-lg transition-transform hover:rotate-0 duration-500">
               <div className="overflow-hidden rounded-[2rem] aspect-[4/3] sm:aspect-[1/1] relative">
                 <img
-                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80"
+                  src="/logo-bawah.png"
                   alt="MANYAR HARDBOX Custom Packaging Showcase"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-contain p-6 bg-accent/20 transition-transform duration-700 hover:scale-105"
                 />
                 
                 {/* Floating Highlight Sticker */}

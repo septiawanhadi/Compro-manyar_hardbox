@@ -35,17 +35,11 @@ export const Navbar: React.FC = () => {
       >
         {/* Brand Logo */}
         <a href="#hero" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground transition-transform group-hover:scale-105">
-            <Package className="w-5 h-5" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display font-extrabold text-xl tracking-tight text-foreground leading-none">
-              MANYAR HARDBOX
-            </span>
-            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest leading-none mt-1">
-              Custom Packaging
-            </span>
-          </div>
+          <img
+            src="/logo-menyamping.png"
+            alt="Manyar Hardbox Logo"
+            className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </a>
 
         {/* Desktop Navigation Links */}
