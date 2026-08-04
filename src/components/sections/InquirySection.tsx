@@ -172,16 +172,16 @@ export const InquirySection: React.FC = () => {
               </div>
             </Card>
 
-            {/* Direct Contact Card */}
-            <div className="p-6 rounded-[2rem] bg-surface border border-border/80 text-center">
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">Ingin Konsultasi Cepat via WhatsApp?</p>
+            {/* Direct Contact Banner */}
+            <div className="px-6 py-4 rounded-2xl bg-primary/5 text-center">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">Ingin Konsultasi Cepat via WhatsApp?</p>
               <a
-                href="https://wa.me/6281234567890?text=Halo%20MANYAR%20HARDBOX,%20saya%20ingin%20konsultasi%20cetak%20packaging%20custom"
+                href="https://wa.me/6289679008888?text=Halo%20MANYAR%20HARDBOX,%20saya%20ingin%20konsultasi%20cetak%20packaging%20custom"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
+                className="inline-flex items-center gap-2 text-primary font-bold hover:underline text-sm"
               >
-                <span>Hubungi Tim Sales Hotline: +62 812-3456-7890</span>
+                <span>Hubungi Tim Sales Hotline: +62 896-7900-8888</span>
               </a>
             </div>
           </motion.div>

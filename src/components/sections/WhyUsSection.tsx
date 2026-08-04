@@ -55,26 +55,26 @@ export const WhyUsSection: React.FC = () => {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {pillars.map((pillar, idx) => (
             <motion.div key={idx} variants={fadeUp}>
-              <Card variant="surface" className="h-full flex flex-col justify-between p-8 border-border/80">
+              <div className="h-full flex flex-col justify-between p-6 rounded-3xl bg-surface/60 border border-border/40 hover:bg-surface hover:border-border/80 transition-all duration-300">
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-muted/80 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-muted/80 flex items-center justify-center mb-5">
                     {pillar.icon}
                   </div>
-                  <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest bg-accent/50 px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest bg-accent/40 px-2.5 py-1 rounded-full">
                     {pillar.badge}
                   </span>
-                  <h3 className="font-display font-bold text-xl text-foreground mt-4 mb-3">
+                  <h3 className="font-display font-bold text-lg text-foreground mt-3 mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
-              </Card>
+              </div>
             </motion.div>
           ))}
         </motion.div>

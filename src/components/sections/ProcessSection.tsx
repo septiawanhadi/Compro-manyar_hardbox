@@ -54,24 +54,24 @@ export const ProcessSection: React.FC = () => {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative"
         >
           {steps.map((step, idx) => (
             <motion.div key={idx} variants={fadeUp} className="relative z-10">
-              <div className="p-8 rounded-[2.5rem] bg-surface border border-border/80 shadow-soft h-full flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+              <div className="p-6 rounded-3xl bg-background/70 border border-border/50 h-full flex flex-col justify-between hover:bg-background hover:border-border transition-all duration-300">
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-muted flex items-center justify-center">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-muted/80 flex items-center justify-center">
                       {step.icon}
                     </div>
-                    <span className="font-display font-extrabold text-3xl text-primary/30">
+                    <span className="font-display font-extrabold text-2xl text-primary/30">
                       {step.num}
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-xl text-foreground mb-3">
+                  <h3 className="font-display font-bold text-lg text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>

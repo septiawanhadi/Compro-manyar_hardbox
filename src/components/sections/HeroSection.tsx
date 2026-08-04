@@ -74,20 +74,20 @@ export const HeroSection: React.FC = () => {
             className="lg:col-span-5 relative"
           >
             <div className="relative rounded-[2.5rem] p-3 bg-white border-4 border-white shadow-soft-lg transition-transform hover:rotate-0 duration-500">
-              <div className="overflow-hidden rounded-[2rem] aspect-[4/3] sm:aspect-[1/1] relative">
+              <div className="overflow-hidden rounded-[2rem] min-h-[340px] sm:min-h-[380px] relative bg-accent/20 flex items-center justify-center p-6 pb-28 sm:pb-24">
                 <img
                   src="/logo-bawah.png"
                   alt="MANYAR HARDBOX Custom Packaging Showcase"
-                  className="w-full h-full object-contain p-6 bg-accent/20 transition-transform duration-700 hover:scale-105"
+                  className="max-h-48 sm:max-h-64 w-auto object-contain transition-transform duration-700 hover:scale-105"
                 />
                 
                 {/* Floating Highlight Sticker */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-border shadow-soft flex items-center justify-between">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-border shadow-soft flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Garansi Mutu</p>
-                    <p className="text-sm font-extrabold text-foreground">Akurasi Warna 99.2% Presisi</p>
+                    <p className="text-[10px] sm:text-xs font-bold text-muted-foreground uppercase tracking-wider">Garansi Mutu</p>
+                    <p className="text-xs sm:text-sm font-extrabold text-foreground">Akurasi Warna 99.2% Presisi</p>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                  <span className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-bold shrink-0">
                     Cetak High-Speed
                   </span>
                 </div>

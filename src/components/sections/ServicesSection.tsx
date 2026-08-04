@@ -128,15 +128,10 @@ export const ServicesSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-border flex justify-end gap-3">
-              <Button variant="outline" size="sm" onClick={() => setSelectedService(null)}>
+            <div className="pt-4 border-t border-border flex justify-end">
+              <Button variant="primary" size="md" onClick={() => setSelectedService(null)} className="w-full sm:w-auto">
                 Tutup
               </Button>
-              <a href="#inquiry" onClick={() => setSelectedService(null)}>
-                <Button variant="primary" size="sm">
-                  Pesan Layanan Ini
-                </Button>
-              </a>
             </div>
           </div>
         )}
