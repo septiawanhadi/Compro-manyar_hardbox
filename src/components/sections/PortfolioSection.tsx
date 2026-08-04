@@ -26,22 +26,22 @@ export const PortfolioSection: React.FC = () => {
     : MOCK_PORTFOLIO.filter(item => item.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-24 bg-secondary text-white relative overflow-hidden">
-      {/* Soft Ambient Blobs */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+    <section id="portfolio" className="py-24 bg-secondary text-secondary-foreground relative overflow-hidden">
+      {/* Subtle Ambient Glow */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white bg-white/15 px-4 py-1.5 rounded-full inline-block mb-3">
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white bg-white/20 px-4 py-1.5 rounded-full inline-block mb-3 backdrop-blur-sm">
             Showroom Hasil Cetak
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
             Karya Terpilih & Portofolio Kemasan
           </h2>
-          <p className="text-white/90 text-base sm:text-lg mt-4 leading-relaxed">
+          <p className="text-white/85 text-base sm:text-lg mt-4 leading-relaxed">
             Eksplorasi ragam karya kemasan buatan pabrik MANYAR HARDBOX untuk berbagai segmen industri brand ternama.
           </p>
         </motion.div>
@@ -54,8 +54,8 @@ export const PortfolioSection: React.FC = () => {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeCategory === cat
-                  ? 'bg-white text-secondary shadow-clay scale-105'
-                  : 'bg-white/20 text-white hover:bg-white/35'
+                  ? 'bg-white text-secondary shadow-soft-lg scale-105'
+                  : 'bg-white/15 text-white hover:bg-white/25'
               }`}
             >
               {cat}

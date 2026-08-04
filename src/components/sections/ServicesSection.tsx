@@ -24,22 +24,18 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Soft Ambient Blobs */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="services" className="py-24 bg-muted/30 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white bg-white/15 px-4 py-1.5 rounded-full inline-block mb-3">
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full inline-block mb-3">
             Layanan & Produk Percetakan
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-foreground">
             Solusi Packaging Custom Presisi
           </h2>
-          <p className="text-white/85 text-base sm:text-lg mt-4 leading-relaxed">
+          <p className="text-muted-foreground text-base sm:text-lg mt-4 leading-relaxed">
             Pilihan bahan, teknik cetak, dan konstruksi kemasan yang dirancang khusus untuk meningkatkan nilai jual dan perlindungan produk Anda.
           </p>
         </motion.div>

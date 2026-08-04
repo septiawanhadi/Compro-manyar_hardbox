@@ -108,18 +108,22 @@ export const InquirySection: React.FC = () => {
   };
 
   return (
-    <section id="inquiry" className="py-24 bg-muted/40 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="inquiry" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full inline-block mb-3">
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white bg-white/20 px-4 py-1.5 rounded-full inline-block mb-3 backdrop-blur-sm">
             Mulai Diskusi Proyek
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-foreground">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
             Mulai Pesanan Custom Packaging Anda
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg mt-4 leading-relaxed">
+          <p className="text-white/85 text-base sm:text-lg mt-4 leading-relaxed">
             Isi formulir di bawah ini untuk mendapatkan penawaran harga transparan, sampel proofing fisik, dan konsultasi pola dieline gratis.
           </p>
         </motion.div>
@@ -128,58 +132,58 @@ export const InquirySection: React.FC = () => {
           
           {/* Part A: Client Expectation Guide (Left Column) */}
           <motion.div {...fadeUp} className="lg:col-span-5 space-y-6">
-            <Card variant="sand" className="p-8 border-border">
-              <h3 className="font-display font-bold text-2xl text-foreground mb-6">
+            <div className="p-8 rounded-[2.5rem] bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-soft-lg">
+              <h3 className="font-display font-bold text-2xl text-white mb-6">
                 Apa Yang Dapat Anda Harapkan?
               </h3>
 
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-primary shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0 mt-1">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-base text-foreground">Respons Cepat &lt;24 Jam</h4>
-                    <p className="text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed">
+                    <h4 className="font-display font-bold text-base text-white">Respons Cepat &lt;24 Jam</h4>
+                    <p className="text-white/80 text-xs sm:text-sm mt-1 leading-relaxed">
                       Tim estimator kami akan menghubungi Anda dengan rincian SOW & biaya bahan paling efisien.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0 mt-1">
                     <PackageCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-base text-foreground">Sample Proofing Fisik 1:1</h4>
-                    <p className="text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed">
+                    <h4 className="font-display font-bold text-base text-white">Sample Proofing Fisik 1:1</h4>
+                    <p className="text-white/80 text-xs sm:text-sm mt-1 leading-relaxed">
                       Anda berhak menerima dummy fisik hasil cetak untuk menguji ukuran produk sebelum naik cetak masal.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-primary shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0 mt-1">
                     <FileText className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-base text-foreground">Kerjasama Kerahasiaan (NDA)</h4>
-                    <p className="text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed">
+                    <h4 className="font-display font-bold text-base text-white">Kerjasama Kerahasiaan (NDA)</h4>
+                    <p className="text-white/80 text-xs sm:text-sm mt-1 leading-relaxed">
                       Kerahasiaan pola kemasan & hak cipta brand Anda sepenuhnya dijamin aman oleh hukum.
                     </p>
                   </div>
                 </div>
               </div>
-            </Card>
+            </div>
 
             {/* Direct Contact Banner */}
-            <div className="px-6 py-4 rounded-2xl bg-primary/5 text-center">
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">Ingin Konsultasi Cepat via WhatsApp?</p>
+            <div className="px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-center">
+              <p className="text-xs font-bold text-white/70 uppercase tracking-wider mb-1">Ingin Konsultasi Cepat via WhatsApp?</p>
               <a
                 href="https://wa.me/6289679008888?text=Halo%20MANYAR%20HARDBOX,%20saya%20ingin%20konsultasi%20cetak%20packaging%20custom"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-bold hover:underline text-sm"
+                className="inline-flex items-center gap-2 text-white font-extrabold hover:underline text-sm"
               >
                 <span>Hubungi Tim Sales Hotline: +62 896-7900-8888</span>
               </a>
